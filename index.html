@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="img/bank_48px.png" type="image/x-icon">
+    <title>POS System</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime">
+    <div class="container-fluid">
+<!--        <a class="navbar-brand" href="#">Navbar</a>-->
+        <div id="text1" class="navbar-brand" style="color: #6D4C41;font-size:large;font-weight: bold;"><img src="img/home_page_48px.png">HOME</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a id="text2" class="nav-link active" aria-current="page"  style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/technical_support_100px.png">MANAGEMENT CUSTOMER</a>
+<!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                </li>
+                <li class="nav-item">
+                    <a id="text3" class="nav-link active" aria-current="page"  style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/ingredients_100px.png">MANAGEMENT ITEM</a>
+                </li>
+                <li class="nav-item">
+                    <a id="text4" class="nav-link active" aria-current="page"  style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/order_history_80px.png">PLACE ORDER</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-------------------------------------home------------------------------------------------------------->
+<section id="sec1">
+<div class="container" style="text-align: center">
+    <div class="container" style="display: inline-block;margin-top: 30px">
+        <div class="video">
+
+            <video  width="60%" height="50%"
+                    autoplay loop muted
+            <source src="Videos/Pharrell_Williams_-_Happy_(30_Seconds_of_Happy_-_Animation_Dance_Cover)(720p).mp4" type="video/mp4">
+
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 50px">
+    <div class="row">
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"><img src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png">Assiment</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"><img src="https://img.icons8.com/color/48/000000/ice-cream-bowl.png">Assiment</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"><img src="https://img.icons8.com/color/48/000000/cash-in-hand.png">Assiment</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+    </div>
+</div>
+</section>
+
+<!-------------------------------------Customer------------------------------------------------------------->
+<section id="sec2">
+    <div class="container" >
+        <div class="col-md-6"style="margin-top: 40px" >
+            <div class="card p-0 m-0" style="border: solid #3dd5f3" >
+                <div class="card-header" style="background-color: #3dd5f3;color: white;font-weight: bold">
+                    Search Customer
+                </div>
+                <div class="card-body">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Input Name/NIC" aria-label="Search" style="margin-bottom: 10px">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal-content" style="margin-top: 40px">
+            <div class="modal-header" style="background-color: #3dd5f3;color: white">
+                <h5 class="modal-title" id="exampleModalLabel">New Customer</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Coustomer Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Customer Name">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Address</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Customer Address">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Number</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Telephone Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">ID Number</label>
+                        <input type="text" class="form-control" id="exampleInputPassword" placeholder="Enter NIC Number">
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Clear</button>
+                <button type="button" id="cusE" class="btn btn-warning">Edit</button>
+                <button id="delBuCu" type="button"  class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="container-fluid" style="margin-top: 50px; ">
+                <div class=col>
+                    <table class="table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">NIC</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <td>1</td>
+                        <td>Sandun</td>
+                        <td>Kadawatha</td>
+                        <td>0770297604</td>
+                        <td>20002840</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-------------------------------------Item------------------------------------------------------------->
+<section id="sec3">
+    <div class="container" >
+        <div class="col-md-6"style="margin-top: 40px" >
+            <div class="card p-0 m-0" style="border: solid #f8d7da" >
+                <div class="card-header" style="background-color: #f8d7da;color: white;font-weight: bold">
+                    Search Item
+                </div>
+                <div class="card-body">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control " type="search" placeholder="Item Code/Name" aria-label="Search" style="margin-bottom: 10px">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal-content" style="margin-top: 40px">
+            <div class="modal-header" style="background-color: #f8d7da;color: white">
+                <h5 class="modal-title" id="ItexampleModalLabel">New Item</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Item Code</label>
+                        <input type="text" class="form-control" id="ItexampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Item Coed">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Item Name</label>
+                        <input type="text" class="form-control" id="ItexampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Item Name">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Quantity</label>
+                        <input type="text" class="form-control" id="ItexampleInputPassword1" placeholder="Enter Quantity">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Price</label>
+                        <input type="text" class="form-control" id="ItexampleInputPassword" placeholder="Enter Price">
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Clear</button>
+                <button type="button" id="ItcusE" class="btn btn-warning">Edit</button>
+                <button id="ItdelBuCu" type="button"  class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="container-fluid" style="margin-top: 50px; ">
+                <div class=col>
+                    <table class="table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <td>I001</td>
+                        <td>Milk</td>
+                        <td>10</td>
+                        <td>35.00</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-------------------------------------Palce Oder------------------------------------------------------------->
+<section id="sec4">
+    <div class="container" style="margin-top: 10px">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary" style="border: solid #ffcd39">
+                    <div class="panel-heading center-block bg-primary">
+                        <h2 class="panel-title" style="background-color: #ffcd39;color: white;text-align: center">Customer Details</h2>
+                    </div>
+                    <div class="panel-body" style="padding: 10px">
+                        <div class="form-group form-inline">
+                            <label>Customer ID : </label>
+                            <select class="form-control">
+                            </select>
+                            <button  class="btn btn-primary">
+                                <a aria-current="page" style="color: white; text-decoration: none" href="customer.html">
+                                    Add new Customer
+                                </a>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label>Customer Name</label>
+                            <input class="form-control">
+                            <label>Address</label>
+                            <input class="form-control">
+                            <label>Number</label>
+                            <input class="form-control">
+                            <label>NIC</label>
+                            <input class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-primary" style="border: solid #ffcd39;margin-top: 33px;margin-bottom: 50px;text-align: center;display: block">
+                    <div class="panel-heading center-block">
+                        <h2 class="panel-title " style="background-color: #ffcd39;color: white">Invoice Details</h2>
+                    </div>
+                    <div class="panel-body" style="padding: 10px">
+                        <div class="form-group form-inline">
+                            <label>Date : </label>
+                            <input type="date" name="date" class="form-control">
+                            <label>OID : </label>
+                            <input type="text"  class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="panel panel-primary panP" style="border: solid #ffcd39">
+                    <div class="panel-heading center-block bg-primary">
+                        <h2 class="panel-title" style="background-color: #ffcd39;text-align: center;color: white">Select Item</h2>
+                    </div>
+                    <div class="panel-body" style="padding: 10px">
+                        <div class="form-group">
+                            <label>Item:</label>
+                            <select  name="item" class="form-control">
+                            </select>
+                        </div>
+
+                        <div class="form-group form-inline" style="margin-top: 30px;">
+                            <label>Price :</label>
+                            <input id="pru" name="itemp"  type="text" class="form-control">
+
+                            <label>Quntity :</label>
+                            <input id="qun" name="itemq"  type="text" class="form-control">
+                        </div>
+
+
+                        <hr style="margin-top: 30px;">
+                        <h4 style="text-align: center">Order Item</h4>
+                        <hr style="margin-bottom:  30px;">
+
+                        <div class="form-group">
+                            <label>Order Quantity</label>
+                            <input type="text" class="form-control wid">
+
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-danger al">Add Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src = js/bootstrap.min.js></script>
+<script>
+    var sec1=document.getElementById('sec1');
+    // sec1.style.display='none';
+
+    var sec2=document.getElementById('sec2');
+    sec2.style.display='none';
+
+    var sec3=document.getElementById('sec3');
+    sec3.style.display='none';
+
+    var sec4=document.getElementById('sec4');
+    sec4.style.display='none';
+
+    // sec1.style.display='block';
+
+    var text1=document.getElementById('text1');
+    text1.style.cursor='pointer';
+    var text2=document.getElementById('text2');
+    text2.style.cursor='pointer';
+    var text3=document.getElementById('text3');
+    text3.style.cursor='pointer';
+    var text4=document.getElementById('text4');
+    text4.style.cursor='pointer';
+
+    text1.addEventListener("click", function () {
+        sec1.style.display='block';
+        sec2.style.display='none';
+        sec3.style.display='none';
+        sec4.style.display='none';
+    });
+
+    text2.addEventListener("click", function () {
+        sec1.style.display='none';
+        sec2.style.display='block';
+        sec3.style.display='none';
+        sec4.style.display='none';
+    });
+
+    text3.addEventListener("click", function () {
+        sec1.style.display='none';
+        sec2.style.display='none';
+        sec3.style.display='block';
+        sec4.style.display='none';
+    });
+
+    text4.addEventListener("click", function () {
+        sec1.style.display='none';
+        sec2.style.display='none';
+        sec3.style.display='none';
+        sec4.style.display='block';
+    });
+</script>
+</body>
+</html>
