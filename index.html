@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="icon" href="img/bank_48px.png" type="image/x-icon">
     <title>POS System</title>
+    <style>
+        .tbl_tr:not(:first-child){
+            cursor: pointer;transition: all .25s ease-in-out;
+        }
+        .tbl_tr:not(:first-child):hover{background-color: #ddd;}
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime">
@@ -100,24 +106,24 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Coustomer Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Customer Name">
+                        <label for="input_name">Coustomer Name</label>
+                        <input type="text" class="form-control" id="input_name" aria-describedby="emailHelp" placeholder="Enter Customer Name">
 
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Address</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Customer Address">
+                        <label for="input_address">Address</label>
+                        <input type="text" class="form-control" id="input_address" aria-describedby="emailHelp" placeholder="Enter Customer Address">
 
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Number</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Telephone Number">
+                        <label for="input_number">Number</label>
+                        <input type="text" class="form-control" id="input_number" placeholder="Enter Telephone Number">
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1">ID Number</label>
-                        <input type="text" class="form-control" id="exampleInputPassword" placeholder="Enter NIC Number">
+                        <label for="input_nic">ID Number</label>
+                        <input type="text" class="form-control" id="input_nic" placeholder="Enter NIC Number">
                     </div>
 
 
@@ -127,7 +133,7 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Clear</button>
                 <button type="button" id="cusE" class="btn btn-warning">Edit</button>
                 <button id="delBuCu" type="button"  class="btn btn-danger">Delete</button>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button id="btn_save" type="button" class="btn btn-primary">Save</button>
             </div>
         </div>
 
@@ -137,7 +143,7 @@
         <div class="row">
             <div class="container-fluid" style="margin-top: 50px; ">
                 <div class=col>
-                    <table class="table">
+                    <table class="table" id="tbl_customer">
                         <thead class="thead-light">
                         <tr>
                             <th scope="col">#</th>
@@ -148,11 +154,11 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <td>1</td>
-                        <td>Sandun</td>
-                        <td>Kadawatha</td>
-                        <td>0770297604</td>
-                        <td>20002840</td>
+<!--                        <td>1</td>-->
+<!--                        <td>Sandun</td>-->
+<!--                        <td>Kadawatha</td>-->
+<!--                        <td>0770297604</td>-->
+<!--                        <td>20002840</td>-->
                         </tbody>
                     </table>
                 </div>
@@ -187,23 +193,23 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Item Code</label>
+                        <label for="ItexampleInputEmail">Item Code</label>
                         <input type="text" class="form-control" id="ItexampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Item Coed">
 
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Item Name</label>
+                        <label for="ItexampleInputEmail1">Item Name</label>
                         <input type="text" class="form-control" id="ItexampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Item Name">
 
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Quantity</label>
+                        <label for="ItexampleInputPassword1">Quantity</label>
                         <input type="text" class="form-control" id="ItexampleInputPassword1" placeholder="Enter Quantity">
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Price</label>
+                        <label for="ItexampleInputPassword">Price</label>
                         <input type="text" class="form-control" id="ItexampleInputPassword" placeholder="Enter Price">
                     </div>
 
@@ -340,7 +346,7 @@
         </div>
     </div>
 </section>
-
+<script src = js/jquery-3.6.0.min.js></script>
 <script src = js/bootstrap.min.js></script>
 <script>
     var sec1=document.getElementById('sec1');
@@ -393,6 +399,45 @@
         sec3.style.display='none';
         sec4.style.display='block';
     });
+
+    function formClear(){
+        $('#input_name').val("");
+        $('#input_address').val("");
+        $('#input_number').val("");
+        $('#input_nic').val("");
+    }
+
+    $('#btn_save').click(function () {
+        var no=1;
+        var name=$('#input_name').val();
+        var addrees=$('#input_address').val();
+        var number=$('#input_number').val();
+        var nic=$('#input_nic').val();
+
+        $('#tbl_customer').append(
+            "<tr class='tbl_tr'>"+"<td>"+ no +"</td>"+"<td>"+ name +"</td>"+"<td>"+ addrees +"</td>"+
+            "<td>"+ number +"</td>"+"<td>"+ nic +"</td>"
+            +"</tr>"
+        );
+
+        formClear();
+    });
+
+    $('#tbl_customer').click(function () {
+        var table = document.getElementById('tbl_customer');
+
+        for(var i = 0; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick = function()
+            {
+                document.getElementById("input_name").value = this.cells[1].innerHTML;
+                document.getElementById("input_address").value = this.cells[2].innerHTML;
+                document.getElementById("input_number").value = this.cells[3].innerHTML;
+                document.getElementById("input_nic").value = this.cells[4].innerHTML;
+            };
+        }
+    });
+
 </script>
 </body>
 </html>
