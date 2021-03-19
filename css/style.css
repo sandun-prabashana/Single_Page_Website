@@ -1,0 +1,45 @@
+.lbl-error {
+    color: red;
+    font-size: 0.9em;
+}
+.input-box{
+    margin-bottom: 10px;
+}
+.bg-Border {
+    background-color: #ffcd39 !important;
+}
+
+
+#orderContent{
+    background-color:#cfd8dc ;
+}
+
+.content-box-2{
+    background-color: #ffffff;
+    padding: 40px;
+}
+#total-text{
+    color: #3d98ef;
+    font-size: 13px;
+}
+#total-text1{
+    color: #ef5350;
+    font-size: 13px;
+}
+/*section.content-box-2 label{*/
+/*    font-weight: bold;*/
+/*    margin-right: 10px;*/
+/*}*/
+
+
+
+#total{
+    font-size: 30px;
+    color: #3d98ef;
+}
+#subtotal{
+    color: #ef5350;
+    font-size: 30px;
+}
+
+

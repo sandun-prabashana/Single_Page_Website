@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Item Code</th>
+<!--        <th>Item Name</th>-->
+<!--        <th>Price</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr><td class="email">foo</td></tr>
+    <tr><td class="email">bar</td></tr>
+    <tr><td class="email">abc@yahoo.com</td></tr>
+    </tbody>
+</table>
+
+<script>
+    getEmail();
+    function getEmail(){
+        var email = new Array();
+        var arr = document.getElementsByClassName('email');
+        for(var i=0; i< arr.length; i++){
+            email.push(arr[i].innerHTML);
+        }
+        alert(email.join(','));
+    }
+</script>
+</body>
+</html>
