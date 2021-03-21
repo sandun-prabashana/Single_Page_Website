@@ -27,7 +27,7 @@ text1.addEventListener("click", function () {
     sec2.style.display='none';
     sec3.style.display='none';
     sec4.style.display='none';
-
+    AAA();
     III();
     CCC();
 });

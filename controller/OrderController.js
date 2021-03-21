@@ -1,5 +1,3 @@
-$('#txtOrderID').val('M00-001');
-
 
 var OrderId=/^(M00-)[0-9]{1,3}$/;
 
